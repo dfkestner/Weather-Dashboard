@@ -7,49 +7,73 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Dashboard</title>
-    <div class="header">
+</head>
+<body>
+    <div class="navbar navbar-dark bg-dark text-white"><h1>Weather Dashboard</h1></div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-2">
                     <div class="input-group">
                         <input type="text" id="searchInput" class="form-control" placeholder="Search for a city">
                         <div class="input-group-append">
-                            <button type="submit" class="btn btn-outline-secondary" id="searchButton">
+                            <button type="submit" class="btn btn-primary text-white" id="searchButton">
                                 <i class="fa fa-search-location"></i>Search
                             </button>
                         </div>
                     </div>
-                    <div class="list-group">Recent Searches
-
+                    <div class="list-group" id="recent">Recent Searches
+                        <div class="card bg-light" id="recent"></div>
                     </div>
                 </div>
                 <div class="col-sm-10">
-                    <h2 id="currentWeather"></h2>
-                    <img id="icon">
-                        <p id=currentStats></p>
+                    <div class="card bg-light mb-3 flex-grow-1">
+                        <h2 class="card-header" id="currentWeather"></h2>
+                        <img class="card-img-top" id="icon">
+                        <div class="card-body">
+                          <p class="card-text" id="currentStats"></p>
+                          <p id="uVText"></p>
+                        </div>
+                      </div>
                             <div class="row">
                                 <h4 id="fiveDay"></h4>
                             </div>
                             <div class="row">
-                                <img id="icon1" class="col">
-                                <p id="day1"></p>
-                                <img id="icon2">
-                                <p id="day2" class="col"></p>
-                                <img id="icon3">
-                                <p id="day3" class="col"></p>
-                                <img id="icon4">
-                                <p id="day4" class="col"></p>
-                                <img id="icon5">
-                                <p id="day5" class="col"></p>
+                                <div class="card col alert-primary mb-3">
+                                    <img class="card-img-top" id="day1">
+                                    <div class="card-body">
+                                      <p class="card-text" id="day1Stats"></p>
+                                    </div>
+                                </div>
+                                <div class="card col alert-primary mb-3">
+                                    <img class="card-img-top" id="day2">
+                                    <div class="card-body">
+                                      <p class="card-text" id="day2Stats"></p>
+                                    </div>
+                                </div>
+                                <div class="card col alert-primary mb-3">
+                                    <img class="card-img-top" id="day3">
+                                    <div class="card-body">
+                                      <p class="card-text" id="day3Stats"></p>
+                                    </div>
+                                </div>
+                                <div class="card col alert-primary mb-3">
+                                    <img class="card-img-top" id="day4">
+                                    <div class="card-body">
+                                      <p class="card-text" id="day4Stats"></p>
+                                    </div>
+                                </div>
+                                <div class="card col alert-primary mb-3">
+                                    <img class="card-img-top" id="day5">
+                                    <div class="card-body">
+                                      <p class="card-text" id="day5Stats"></p>
+                                    </div>
+                                </div>
                             </div>                
                             
                      
                 </div>
             </div>
         </div>
-    </div>
-</head>
-<body>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
